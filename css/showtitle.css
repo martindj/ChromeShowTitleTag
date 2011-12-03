@@ -35,7 +35,7 @@
   background-position: top left;
 }
 
-#showtitlewrapper a:link, #showtitlewrapper a:visited, .link {
+#showtitlewrapper a:link, #showtitlewrapper a:visited, #showtitlewrapper .link {
   color: #000 !important;
   background-position: bottom left;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@
   margin: 0 0px -3px 3px;
 }
 
-#showtitlewrapper a:last-child, .link:last-child {
+#showtitlewrapper a:last-child, #showtitlewrapper .link:last-child {
   margin-right: 12px;
 }
 
