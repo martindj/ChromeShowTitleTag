@@ -53,13 +53,6 @@ var chrome_title_tag = {
   
   hide: function() {
     this.div.parentNode.removeChild(this.div);
-    /*
-    var blacklist = confirm('Always hide on this domain?');
-    if (blacklist) {
-      this.blacklist();
-    }
-    */
-    
   },
   
   blacklist: function() {
@@ -115,7 +108,6 @@ var chrome_title_tag = {
     
     
     chrome.extension.sendRequest({type: "settings"}, function(response) {
-      console.log('settings:', response);
       if ( ! response.is_blacklisted) {
         this_obj.display(response);
         this_obj.set_title();
@@ -123,7 +115,7 @@ var chrome_title_tag = {
         
         document.addEventListener('DOMSubtreeModified', this_obj.new_title, 'false');
         
-        setInterval("chrome_title_tag.check_pos()",500);
+        setInterval("chrome_title_tag.check_pos()",5000);
         
       }
       
