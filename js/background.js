@@ -27,7 +27,7 @@ chrome.extension.onRequest.addListener(
       config.set(request.key, request.value);
       sendResponse( config.get(request.key) );
     } else if (request.type == "get") {
-      sendResponse( config.get(request.key) );
+      sendResponse( settings.get_position() );
     } else {
       sendResponse({ error:'error' });
     }
