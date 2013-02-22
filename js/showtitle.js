@@ -6,7 +6,7 @@ var chrome_title_tag = {
   create_markup: function() {
     this.div.id = "showtitlewrapper";
     this.div.className = "not-initialized";
-    this.div.innerHTML = '<p><span id="showtitle-title"></span> <span class="link" id="showtitlemove" title="Move this bar"><i class="icon-move"></i></span> <span id="showtitleremovelink" class="link" title="Hide this bar"><i class="icon-eye-open"></i><i class="icon-eye-close"></i></span></p>';
+    this.div.innerHTML = '<p><span id="showtitle-title"></span> <span class="link" id="showtitlemove" title="Move this bar"><i class="icon-hand-down"></i><i class="icon-hand-up"></i><i class="icon-hand-right"></i><i class="icon-hand-left"></i></span> <span id="showtitleremovelink" class="link" title="Hide this bar"><i class="icon-eye-open"></i><i class="icon-eye-close"></i></span></p>';
     document.body.appendChild(this.div);
   },
   
