@@ -1,17 +1,21 @@
 {
-   "background_page": "background.html",
-   "content_scripts": [ {
+    "manifest_version": 2,
+    "background": {
+        "page": "background.html"
+    },
+    "content_scripts": [ {
       "css": [ "css/showtitle.css", "css/images.css" ],
       "js": [ "js/config.js", "js/showtitle.js" ],
       "matches": [ "http://*/*", "https://*/*" ]
-   } ],
-   "description": "Shows title in top of the page, since you cant read the title in the small tabs. Created by Martin Dalgaard",
-   "icons": {
+    } ],
+    "description": "Shows title in top of the page, since you cant read the title in the small tabs. Created by Martin Dalgaard",
+    "icons": {
       "128": "img/icon128.png",
       "16": "img/icon16.png",
       "48": "img/icon48.png"
-   },
-   "name": "Show Title Tag",
-   "update_url": "http://clients2.google.com/service/update2/crx",
-   "version": "1.6.2"
+    },
+    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvt53q7S3njQoIhgDhp7SpcdU2KGu0X6swJQULwlGbhFazqZbR7xciIlGtWw82v0FF2gxBT7WqZP3AibOeODw2IPDnFTlk9n6bMqiZtEskmUk5M9+BMF5B2lBaIepEBrHK42tgh1vJ8cCys9qoQFg8suL0Nq6Xe0vslVQcx+RRPwIDAQAB",
+    "name": "Show Title Tag",
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "1.6.2"
 }
