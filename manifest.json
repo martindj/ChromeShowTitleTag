@@ -4,7 +4,7 @@
         "page": "background.html"
     },
     "content_scripts": [ {
-      "css": [ "css/showtitle.css", "css/images.css" ],
+      "css": [ "css/showtitle.css" ],
       "js": [ "js/config.js", "js/showtitle.js" ],
       "matches": [ "http://*/*", "https://*/*" ]
     } ],
@@ -14,8 +14,12 @@
       "16": "img/icon16.png",
       "48": "img/icon48.png"
     },
+    "web_accessible_resources": [
+        "/font/fontawesome-webfont.tff",
+        "/font/fontawesome-webfont.woff"
+    ],
     "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvt53q7S3njQoIhgDhp7SpcdU2KGu0X6swJQULwlGbhFazqZbR7xciIlGtWw82v0FF2gxBT7WqZP3AibOeODw2IPDnFTlk9n6bMqiZtEskmUk5M9+BMF5B2lBaIepEBrHK42tgh1vJ8cCys9qoQFg8suL0Nq6Xe0vslVQcx+RRPwIDAQAB",
     "name": "Show Title Tag",
     "update_url": "http://clients2.google.com/service/update2/crx",
-    "version": "1.6.2"
+    "version": "2.0"
 }
