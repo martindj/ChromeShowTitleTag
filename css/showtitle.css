@@ -86,6 +86,8 @@
 
 #showtitlewrapper .link {
     padding-left: 2px;
+    color: black !important;
+    cursor: pointer;
 }
 
 #showtitlewrapper p {
