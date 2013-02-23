@@ -18,6 +18,7 @@
   z-index: 9999;
   font-size: 11px !important;
   font-family: sans-serif !important;
+  width: auto;
 
   background: -webkit-linear-gradient(top,  #efefef 0%,#e0e0e0 100%);
   border: 1px solid white; /* white */
@@ -30,6 +31,10 @@
 
 #showtitlewrapper.not-initialized {
     display: none;
+}
+
+#showtitlewrapper .tolong {
+    color: #B60202;
 }
 
 #showtitlemove i {

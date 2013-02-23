@@ -8,13 +8,25 @@ var chrome_title_tag = {
      * @return (void)
      */
     set_title: function () {
+        var tolong_cutoff = 65;
         var ts = Math.round((new Date()).getTime() / 1000); // unix timestamp in seconds
         if (chrome_title_tag_last_change > ts - 1) {
             return false;
         }
         chrome_title_tag_last_change = ts;
 
-        var htmltitle = htmlspecialchars(document.title);
+        var htmltitle = document.title;
+
+        if (htmltitle.length > tolong_cutoff) {
+            htmltitle = htmltitle.slice(0, tolong_cutoff) + 'TOLONGCUTOFF' + htmltitle.slice(tolong_cutoff);
+        }
+
+        htmltitle = htmlspecialchars(htmltitle);
+
+        if (htmltitle.length > tolong_cutoff) {
+            htmltitle = htmltitle.replace('TOLONGCUTOFF', '<span class="tolong">') + '</span>';
+        }
+
         var titlelength = parseInt(document.title.length);
         var showtitle_title = document.getElementById('showtitle-title');
         if (showtitle_title !== null) {
