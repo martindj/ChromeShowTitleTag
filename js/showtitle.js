@@ -36,11 +36,11 @@ var chrome_title_tag = {
     },
 
     /**
-     * Updates the title in 0.1 second. Reason for delay: Wait for the DOM to update correctly.
+     * Updates the title in 1 second. Reason for delay: Wait for the DOM to update correctly.
      * @return (void)
      */
     set_title_delayed: function () {
-        setTimeout('chrome_title_tag.set_title()', 100);
+        // setTimeout('chrome_title_tag.set_title()', 1000);
     },
 
     /**
