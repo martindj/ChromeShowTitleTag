@@ -36,14 +36,6 @@ var chrome_title_tag = {
     },
 
     /**
-     * Updates the title in 1 second. Reason for delay: Wait for the DOM to update correctly.
-     * @return (void)
-     */
-    set_title_delayed: function () {
-        // setTimeout('chrome_title_tag.set_title()', 1000);
-    },
-
-    /**
      * Toggle whether the title box is shown or hidden. Stores the state in localStorage to remember state for each domain.
      * @return (void)
      */
@@ -139,7 +131,9 @@ var chrome_title_tag = {
         this.set_title();
         this.get_position();
         this.add_handlers();
-        document.addEventListener('DOMSubtreeModified', this.set_title_delayed, 'false');
+
+        var observer = new MutationObserver(this.set_title);
+        observer.observe(document.querySelector('title'), { childList: true });
 
         setInterval("chrome_title_tag.get_position()", 2000);
     }
