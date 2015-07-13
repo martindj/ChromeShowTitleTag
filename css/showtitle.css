@@ -22,14 +22,13 @@
  */
 @font-face {
   font-family: 'ShowTitleFontAwesome';
-  src: url('chrome-extension://pkbffbhglicfngmppdlpmpblfgnkdgio/font/fontawesome-webfont.woff') format('woff'), url('chrome-extension://pkbffbhglicfngmppdlpmpblfgnkdgio/font/fontawesome-webfont.ttf') format('truetype');
+  src: url('chrome-extension://__MSG_@@extension_id__/font/fontawesome-webfont.woff') format('woff'), url('chrome-extension://__MSG_@@extension_id__/font/fontawesome-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 #showtitlewrapper {
   /*  Plugin styles
         ------------------------------------------------------- */
-
   position: fixed;
   display: inline-block;
   margin: 0 auto;
